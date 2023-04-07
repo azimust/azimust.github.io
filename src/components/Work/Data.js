@@ -1,6 +1,6 @@
 import binary from '../../assets/binary.png';
 import plants from '../../assets/plants.png';
-import profile from '../../assets/profile-s.png';
+import searchProfile from '../../assets/search-profile.png';
 import momentum from '../../assets/momentum.png';
 import movie from '../../assets/movie.png';
 import todo from '../../assets/todo.png';
@@ -28,7 +28,7 @@ export const projectsData = [
     },
     {
         id: 4,
-        image: profile,
+        image: searchProfile,
         title: 'GH Profile Searcher',
         href: 'https://azimust.github.io/github-profiles/',
     },
