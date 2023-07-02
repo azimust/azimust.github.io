@@ -5,11 +5,11 @@ import WorkItem from './WorkItem';
 const Works = () => {
   return (
     <div className="work__container container grid">
-        {projectsData.map((item, index) => {
-            return (
-                <WorkItem item={item} key={index.id}/>
-            )
-        })}
+      {projectsData.map((item, index) => {
+        return (
+          <WorkItem item={item} key={index.id} />
+        )
+      })}
     </div>
   )
 }
