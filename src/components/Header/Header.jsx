@@ -29,11 +29,11 @@ const Header = () => {
                             </a>
                         </li>
 
-                        <li className="nav__item">
+                        {/* <li className="nav__item">
                             <a href="#portfolio" className="nav__link">
                                 <Icon icon="ic:outline-work-outline" /> Portfolio
                             </a>
-                        </li>
+                        </li> */}
 
                         <li className="nav__item">
                             <a href="#contact" className="nav__link">
