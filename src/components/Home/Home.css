@@ -114,6 +114,10 @@
 }
 
 @media (max-width: 768px) {
+    .home__container .container .grid {
+        justify-content: space-around;
+    }
+
     .home__content {
         grid-template-columns: 0.5fr 3fr;
         padding-top: 3.5rem;
