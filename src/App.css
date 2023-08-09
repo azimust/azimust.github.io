@@ -13,7 +13,7 @@
 
   --body-font: 'Poppins', sans-serif;
 
-  --big-font-size: 3.5rem;
+  --big-font-size: 3rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
@@ -40,7 +40,7 @@
 
 @media (max-width: 992px) {
   :root {
-    --big-font-size: 2.75rem;
+    --big-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.25rem;
