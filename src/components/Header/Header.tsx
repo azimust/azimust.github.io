@@ -4,10 +4,11 @@ import { Icon } from '@iconify/react';
 
 const Header = () => {
     const [Toggle, showMenu] = useState(false);
+    
     return (
         <header className="header">
             <nav className="nav container">
-                <h3 href="#" className="nav__logo">Azimbek</h3>
+                <h3 className="nav__logo">Azimbek</h3>
 
                 <div className={Toggle ? 'nav__menu show-menu' : 'nav__menu'}>
                     <ul className="nav__list grid">

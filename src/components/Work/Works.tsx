@@ -1,4 +1,3 @@
-import React from 'react';
 import { projectsData } from './Data';
 import WorkItem from './WorkItem';
 
@@ -7,7 +6,7 @@ const Works = () => {
     <div className="work__container container grid">
       {projectsData.map((item, index) => {
         return (
-          <WorkItem item={item} key={index.id} />
+          <WorkItem {...item} key={index} />
         )
       })}
     </div>
