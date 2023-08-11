@@ -1,16 +1,16 @@
-import { useRef } from 'react';
+import { useRef, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null);
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const name = form.current.querySelector('[name="name"]').value;
-        const email = form.current.querySelector('[name="email"]').value;
-        const message = form.current.querySelector('[name="message"]').value;
+        const name = form.current?.querySelector<HTMLInputElement>('[name="name"]')?.value;
+        const email = form.current?.querySelector<HTMLInputElement>('[name="email"]')?.value;
+        const message = form.current?.querySelector<HTMLTextAreaElement>('[name="message"]')?.value;
 
         if (!name || !email || !message) {
             return;
@@ -19,10 +19,10 @@ const Contact = () => {
         emailjs.sendForm(
             'service_7jabavh',
             'template_8nlgyeg',
-            form.current,
+            e.currentTarget,
             'ZPViBwka8SEmq3AB9'
         )
-        e.target.reset()
+        e.currentTarget.reset()
     };
 
     return (
@@ -68,13 +68,13 @@ const Contact = () => {
 
                         <div className="contact__form-div contact__form-area">
                             <label className="contact__form-tag">Message</label>
-                            <textarea name="message" cols="30" rows="10"
+                            <textarea name="message" cols={30} rows={10}
                                 className='contact__form-input' placeholder='Write your message'></textarea>
                         </div>
-                        <button href="#contact" className="button button--flex">
+                        <a href="#contact" className="button button--flex">
                             Send Message
                             <svg
-                                class="button__icon"
+                                className="button__icon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"
@@ -90,7 +90,7 @@ const Contact = () => {
                                     fill="var(--container-color)"
                                 ></path>
                             </svg>
-                        </button>
+                        </a>
                     </form>
                 </div>
             </div>
