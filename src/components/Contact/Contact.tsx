@@ -71,7 +71,7 @@ const Contact = () => {
                             <textarea name="message" cols={30} rows={10}
                                 className='contact__form-input' placeholder='Write your message'></textarea>
                         </div>
-                        <a href="#contact" className="button button--flex">
+                        <button className="button button--flex">
                             Send Message
                             <svg
                                 className="button__icon"
@@ -90,7 +90,7 @@ const Contact = () => {
                                     fill="var(--container-color)"
                                 ></path>
                             </svg>
-                        </a>
+                        </button>
                     </form>
                 </div>
             </div>
